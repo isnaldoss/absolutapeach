@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src/images/favicon_abv.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        scroll-behavior: smooth;
+      }
+
+      #root {
+        height: 100%;
+        width: 100%;
+      }
+      
+      .custom-header {
+      height: 150px;
+      align-items: center;
+
+      /* custom-header.css */
+    }
+      /* Estilo para o cabeçalho fixo */
+      .fixed-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff; /* Cor de fundo do cabeçalho */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar o cabeçalho */
+        z-index: 50; /* Garante que o cabeçalho fique acima de outros elementos */
+        height: 150px; /* Altura do cabeçalho */
+        display: flex;
+        align-items: center; /* Centraliza o conteúdo verticalmente */
+        padding: 0 20px; /* Ajuste o espaçamento interno conforme necessário */
+        box-sizing: border-box; /* Inclui padding e border na largura total */
+      }
+
+      /* Adiciona um espaço no topo do conteúdo para compensar o cabeçalho fixo */
+      .content-padding {
+        padding-top: 150px; /* O mesmo valor da altura do cabeçalho */
+      }
+      /* Adiciona um espaço para rolagem suave dos links */
+      .sectionx::before {
+        content: "";
+        display: block;
+        height: 150px; /* O mesmo valor da altura do cabeçalho */
+        margin-top: -150px; /* Compensa a altura do cabeçalho */
+        visibility: hidden;
+      }
+            
+    </style>
+    <title>Absolut Apeach</title>
+  </head>
+  <body>
+    <div id="root" class="content-padding"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
